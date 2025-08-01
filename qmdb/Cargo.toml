@@ -35,7 +35,7 @@ hpfile = { path = "../hpfile" }
 rs_merkle = "1.5.0"
 aes-gcm = "0.10.3"
 aead = "0.5.2"
-generic-array = "1.2.0"
+generic-array = "1.1.0"
 log = "0.4.27"
 
 [target.'cfg(target_os = "linux")'.dependencies]
