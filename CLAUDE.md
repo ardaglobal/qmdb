@@ -72,6 +72,7 @@ QMDB is a high-performance verifiable key-value store optimized for blockchain s
 2. Prefetcher handles deletion/creation, fills EntryCache, forwards to Updater
 3. Updater processes updates/deletes/creates, modifies B-tree, sends requests to Flusher
 4. Flusher writes to EntryFile/TwigFile, updates Merkle tree, manages pruning
+5. **Block-level persistence**: All disk writes and Merkle tree synchronization happen once per block, ensuring atomicity and minimizing I/O overhead
 
 ### Important Patterns
 - **Append-only design**: Minimizes SSD write amplification
